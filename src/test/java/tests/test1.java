@@ -29,6 +29,7 @@ public class test1 {
         //chromeOptions.addArguments("--user-data-dir=C:\\Users\\A4F7~1\\AppData\\Local\\Temp\\scoped_dir8948_2027490107\\Default");
         //chromeOptions.addArguments("--profile-directory=Default");
         webDriver = new ChromeDriver(chromeOptions);
+        calcPage = new CalcPage(webDriver);
     }
 
     @BeforeEach
