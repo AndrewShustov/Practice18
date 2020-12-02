@@ -9,7 +9,7 @@ import static org.openqa.selenium.support.PageFactory.initElements;
 
 public class CalcPage {
     @FindBy(xpath = ("//*[@jsname='VssY5c']"))
-    private WebElement inf;
+    private WebElement result;
 
     public CalcPage() {
     }
@@ -18,7 +18,7 @@ public class CalcPage {
         PageFactory.initElements(driver, this);
     }
 
-    public String geiInf() {
-        return inf.getText();
+    public String getResult() {
+        return result.getText();
     }
 }

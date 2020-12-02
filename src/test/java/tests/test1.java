@@ -53,6 +53,7 @@ public class test1 {
         webDriver.findElement(xpath("//*[@jsname='WxTTNd']")).click(); //divide
         webDriver.findElement(xpath("//*[@jsname='Ax5wH']")).click(); //5
         webDriver.findElement(xpath("//*[@jsname='Pt8tGc']")).click(); //=
+        assertEquals("1", calcPage.getResult());
     }
 
     @Test
@@ -61,7 +62,7 @@ public class test1 {
         webDriver.findElement(xpath("//*[@jsname='WxTTNd']")).click(); //divide
         webDriver.findElement(xpath("//*[@jsname='bkEvMb']")).click(); //0
         webDriver.findElement(xpath("//*[@jsname='Pt8tGc']")).click(); //=
-        assertEquals("Infinity", calcPage.geiInf());
+        assertEquals("Infinity", calcPage.getResult());
     }
 
     @Test
@@ -69,10 +70,11 @@ public class test1 {
         webDriver.findElement(xpath("//*[@jsname='aN1RFf']")).click(); //sin
         webDriver.findElement(xpath("//*[@jsname='j93WEe']")).click(); //(
         webDriver.findElement(xpath("//*[@jsname='Pt8tGc']")).click(); //=
+        assertEquals("Error", calcPage.getResult());
     }
 
     @AfterAll
     public static void quit() {
-        webDriver.quit();
+        //webDriver.quit();
     }
 }
