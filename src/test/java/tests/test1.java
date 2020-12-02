@@ -63,6 +63,6 @@ public class test1 {
 
     @AfterAll
     public static void quit() {
-        //webDriver.quit();
+        webDriver.quit();
     }
 }
